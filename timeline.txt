@@ -1,0 +1,3 @@
+1. Every time the program is launched, it prints the title in the form of ASCII art saying "MIXED MESSAGES - ASCII ART", and it randomly prints a programming language and its place in the TIOBE index of the popularity programming languages for August 2025 - its name and logo; its ratings; its change compared to August 2024.
+2. Add ASCII art programming languages logos.
+3. Create functions like pickRandom(), etc.
