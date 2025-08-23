@@ -23,9 +23,7 @@ const subtitle = `▄▖      ▄▖▄▖  ▄▖                ▘      ▖
                 ▛▌▙▌▙▌▙▌▄▌▐▖  ▙▖█▌▙▖▄▌                   
                     ▄▌                                   
                     
-Your random programming language is:\n`;
-
-const indexLabel = `TIOBE Index - Aug 2025`;
+Random programming language (TIOBE Index, Aug 2025):\n`;
 
 const top20 = [
   {
