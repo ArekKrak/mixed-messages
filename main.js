@@ -450,7 +450,9 @@ const asm20 = `         .++++++++++++++++++::
        ..###*****************:.       
          :+=================::        `;
     
-const keepCalm = `\nNONE!
+const keepCalm = `\n            NONE!
+
+
 
 ▗▖ ▗▖▗▄▄▄▖▗▄▄▄▖▗▄▄▖      ▗▄▄▖ ▗▄▖ ▗▖   ▗▖  ▗▖    
 ▐▌▗▞▘▐▌   ▐▌   ▐▌ ▐▌    ▐▌   ▐▌ ▐▌▐▌   ▐▛▚▞▜▌    
@@ -471,7 +473,7 @@ async function main() {
   await sleep(3000); // 3 seconds
   console.log(top20);
   await sleep(4000);
-  console.log(cPlusPlus2);
+  console.log(keepCalm);
 }
 
 main();
