@@ -20,7 +20,7 @@ const subtitle = `▄▖      ▄▖▄▖  ▄▖                ▘      ▖
                 ▛▌▙▌▙▌▙▌▄▌▐▖  ▙▖█▌▙▖▄▌                   
                     ▄▌                                   
                     
-Your random language is:\n`;
+Your random programming language is:\n`;
 
 const python1 = `          .-=++******++=:.          
          :**==+***********:         
