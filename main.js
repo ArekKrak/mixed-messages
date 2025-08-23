@@ -515,7 +515,7 @@ const top20 = [
          :+=================::        \n`]
   },
   {
-    name: `NONE`,
+    name: `N/A`,
     rank: 0,
     artLogo: [`
 
@@ -551,9 +551,9 @@ async function main() {
   await sleep(6000); // 3 seconds
   console.log(subtitle);
   await sleep(4000);
-  const langName = top20[5].name
-  const rank = top20[5].rank
-  const artLogo = top20[5].artLogo
+  const langName = top20[20].name
+  const rank = top20[20].rank
+  const artLogo = top20[20].artLogo
   console.log(`Name:\t${langName},\nRank:\t${rank},\n${artLogo}`);
 }
 
