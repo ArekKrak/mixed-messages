@@ -475,7 +475,7 @@ const keepCalm = `\n                      NONE!
        \\______)_____/|_____/ |_______)   \\_____/|_|   |_|                                                      
                                                          `;
 
-/* const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 async function main() {
   console.log(projTitle);
@@ -485,5 +485,4 @@ async function main() {
   console.log(keepCalm);
 }
 
-main(); */
-console.log(keepCalm);
+main();
