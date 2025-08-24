@@ -65,6 +65,7 @@ mixed-messages/
 
 ## Example Output
 
+```text
 #6 on TIOBE Index in Aug 2025: JavaScript.
 Percentage of skilled engineers worldwide who recommend this language: 3.15%
 
@@ -91,7 +92,7 @@ Percentage of skilled engineers worldwide who recommend this language: 3.15%
        ----------------------       
              ---------- 
 
----
+```
 
 ## Key Concepts Demonstrated
 
