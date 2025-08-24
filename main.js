@@ -547,7 +547,7 @@ function randomMessage() {
   if (!lang.name || lang.rank === null) {
     return `\n${art}`;
   }
-  return `#${lang.rank} on TIOBE Index, Aug 2025 is ${lang.name}.\n${lang.artLogo}`;
+  return `#${lang.rank} on TIOBE Index in Aug 2025: ${lang.name}.\n${lang.artLogo}`;
 }
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
