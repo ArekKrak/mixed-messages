@@ -546,7 +546,7 @@ const randomPick = arr => arr[Math.floor(Math.random() * arr.length)];
 
 function randomMessage() {
   const lang = randomPick(top20);
-  return `#${lang.rank} on TIOBE Index, Aug 2025 is ${lang.name}\n${lang.artLogo}.`; 
+  return `#${lang.rank} on TIOBE Index, Aug 2025 is ${lang.name}.\n${lang.artLogo}`; 
 }
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
