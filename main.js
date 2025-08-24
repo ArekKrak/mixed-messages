@@ -553,9 +553,9 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 async function main() {
   console.log(projTitle);
-  await sleep(6000); // 6 seconds
+  await sleep(1000); // 6 seconds
   console.log(subtitle);
-  await sleep(4000);
+  await sleep(1000);
   console.log(randomMessage());
 }
 
