@@ -32,6 +32,7 @@ const top20 = [
   {
     name: `Python`,
     rank: 1,
+    rating: 26.14,
     artLogo: [`\n          .-=++******++=:.          
          :**==+***********:         
          =*=  -***********+         
@@ -55,6 +56,7 @@ const top20 = [
   {
     name: `C++`,
     rank: 2,
+    rating: 9.18,
     artLogo: [`\n              ..-====-..              
            .:-==========-:.           
         .:==================:.        
@@ -82,6 +84,7 @@ const top20 = [
   {
     name: `C`,
     rank: 3,
+    rating: 9.03,
     artLogo: [`\n              +=======              
            +============+           
        =====================+       
@@ -107,6 +110,7 @@ const top20 = [
   {
     name: `Java`,
     rank: 4,
+    rating: 8.59,
     artLogo: [`\n                      ++            
                        ++           
                       +++           
@@ -137,6 +141,7 @@ const top20 = [
   {
     name: `C#`,
     rank: 5,
+    rating: 5.52,
     artLogo: [`\n               ========               
             ==============            
          ====================         
@@ -164,6 +169,7 @@ const top20 = [
   {
     name: `JavaScript`,
     rank: 6,
+    rating: 3.15,
     artLogo: [`\n------------------------------------
 ------------------------------------
 ------------------::::::::::::::----
@@ -190,6 +196,7 @@ const top20 = [
   {
     name: `Visual Basic`,
     rank: 7,
+    rating: 2.33,
     artLogo: [`\n           ##############           
        %####################%       
      ##########################     
@@ -213,6 +220,7 @@ const top20 = [
   {
     name: `Go`,
     rank: 8,
+    rating: 2.11,
     artLogo: [`\n                                                 
                   ++++++++++       ++++++++++    
                 ++++++++++++++  +++++++++++++++  
@@ -228,6 +236,7 @@ const top20 = [
   {
     name: `Perl`,
     rank: 9,
+    rating: 2.08,
     artLogo: [`\n                            %%%%%%%%             
         %%               %%%%%%%%%%%%%           
       %%%%%%%          %%%%%%%%%%%%%%%           
@@ -262,6 +271,7 @@ const top20 = [
   {
     name: `Delphi`,
     rank: 10,
+    rating: 1.82,
     artLogo: [`\n                 %%%%#######%%%%%%                 
              %%%%%%%%%%#######%%%%%%##             
           %%%%%%%%%%#*=-:.:-=**%%%%%%%#%%          
@@ -294,6 +304,7 @@ const top20 = [
   {
     name: `Fortran`,
     rank: 11,
+    rating: 1.75,
     artLogo: [`\n  ********************************  
 ************************************
 ****+..........................=****
@@ -317,6 +328,7 @@ const top20 = [
   {
     name: `SQL`,
     rank: 12,
+    rating: 1.72,
     artLogo: [`\n       ===+++++++++++===                                      
     ==++===         ==+++=                                    
    =+==                 =++                                   
@@ -336,6 +348,7 @@ const top20 = [
   {
     name: `Ada`,
     rank: 13,
+    rating: 1.52,
     artLogo: [`\n
               @@@@@@                   @@@@@                    
               @@@@@@@                  @@@@@                    
@@ -357,6 +370,7 @@ const top20 = [
   {
     name: `R`,
     rank: 14,
+    rating: 1.37,
     artLogo: [`\n           --------------------           
        ----------------------------       
     ------------------------------====    
@@ -378,6 +392,7 @@ const top20 = [
   {
     name: `PHP`,
     rank: 15,
+    rating: 1.27,
     artLogo: [`\n           -----=======++++**           
       --==++++++++===+++++++++**##      
    --=++++++++++++@@*+++++++++++++**#   
@@ -393,6 +408,7 @@ const top20 = [
   {
     name: `MATLAB`,
     rank: 16,
+    rating: 1.19,
     artLogo: [`\n                        %%+##           
                        %*#*=*#          
                       %**%=-+##         
@@ -416,6 +432,7 @@ const top20 = [
   {
     name: `Scratch`,
     rank: 17,
+    rating: 1.15,
     artLogo: [`\n                                                                   
                      ... ..::::.                
                 ..:--------------.              
@@ -442,6 +459,7 @@ const top20 = [
   {
     name: `Rust`,
     rank: 18,
+    rating: 1.13,
     artLogo: [`\n                     @@  @@@  @@                     
                 @@  @@@@@@@@@@@@@  @@                
            @@  @@@@@@@@@@@@@@@@@@@@@@@  @@           
@@ -475,6 +493,7 @@ const top20 = [
   {
     name: `Kotlin`,
     rank: 19,
+    rating: 1.10,
     artLogo: [`\n**+++++++++++++++===================
 ****++++++++++++==================  
 ******++++++++==================    
@@ -498,6 +517,7 @@ const top20 = [
   {
     name: `Assembly Language`,
     rank: 20,
+    rating: 1.03,
     artLogo: [`\n         .++++++++++++++++++::        
        :.##################%#::       
       ::##################%%%%-:      
@@ -552,11 +572,11 @@ function randomMessage() {
      regardless of artLogo being an array of strings or already a string. */
   const art = Array.isArray(lang.artLogo) ? lang.artLogo.join("") : String(lang.artLogo);
   // Prints only the art, if required fields are missing (== null is used to catch both null and undefined.)
-  if (!lang.name || lang.rank == null) {
+  if (!lang.name || lang.rank == null || lang.rating == null) {
     return `\n${art}`;
   }
   // Otherwise, prints "rank + name" line, then the art logo.
-  return `#${lang.rank} on TIOBE Index in Aug 2025: ${lang.name}.\n${art}`;
+  return `#${lang.rank} on TIOBE Index in Aug 2025: ${lang.name}.\nPercentage of skilled engineers worldwide who recommend this language: ${lang.rating}\n${art}`;
 }
 
 /* This function lets "pause" code fora set number of milliseconds. This is an arrow function that takes 'ms' (milliseconds)
