@@ -63,6 +63,23 @@ mixed-messages/
 
 ---
 
+## How to Run
+
+1. Clone the repository:
+```
+  git clone https://github.com/ArekKrak/mixed-messages.git
+  cd mixed-messages
+```
+2. Run with Node.js:
+  - Make sure Node.js is installed:
+```
+  node -v
+```
+  - Run the program:
+```
+  node main.js
+```
+
 ## Example Output
 
 ```text
