@@ -544,7 +544,7 @@ const randomPick = arr => arr[Math.floor(Math.random() * arr.length)];
 
 function randomMessage() {
   const lang = randomPick(top20);
-  if (lang > 19) {
+  if (lang[20]) {
     return `\n${lang.artLogo}`;
   } else {
     return `#${lang.rank} on TIOBE Index, Aug 2025 is ${lang.name}.\n${lang.artLogo}`;
