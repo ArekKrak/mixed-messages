@@ -565,8 +565,3 @@ async function main() {
 }
 
 main();
-
-/* const langName = top20[20].name
-const rank = top20[20].rank
-const artLogo = top20[20].artLogo
-console.log(`Name:\t${langName},\nRank:\t${rank},\n${artLogo}`); */
