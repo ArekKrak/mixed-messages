@@ -547,7 +547,7 @@ function randomMessage() {
   const art = Array.isArray(lang.artLogo) ? lang.artLogo.join("") : String(lang.artLogo);
   
   if (!lang.name || lang.rank === null) {
-    return `\n${artLogo}`;
+    return `\n${art}`;
   }
   return `#${lang.rank} on TIOBE Index, Aug 2025 is ${lang.name}.\n${lang.artLogo}`;
 }
