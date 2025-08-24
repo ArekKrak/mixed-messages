@@ -544,22 +544,26 @@ const top20 = [
   }
 ];
 
-/* const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const randomPick = arr => arr[Math.floor(Math.random() * arr.length)];
+
+function randomMessage() {
+  const lang = randomPick(top20);
+  return `#${lang.rank} on TIOBE Index, Aug 2025 is ${lang.name}\n${lang.artLogo}`; 
+}
+
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 async function main() {
   console.log(projTitle);
-  await sleep(6000); // 3 seconds
+  await sleep(6000); // 6 seconds
   console.log(subtitle);
   await sleep(4000);
-  const langName = top20[20].name
-  const rank = top20[20].rank
-  const artLogo = top20[20].artLogo
-  console.log(`Name:\t${langName},\nRank:\t${rank},\n${artLogo}`);
+  console.log(randomMessage());
 }
 
-main(); */
+main();
 
-const langName = top20[20].name
+/* const langName = top20[20].name
 const rank = top20[20].rank
 const artLogo = top20[20].artLogo
-console.log(`Name:\t${langName},\nRank:\t${rank},\n${artLogo}`);
+console.log(`Name:\t${langName},\nRank:\t${rank},\n${artLogo}`); */
