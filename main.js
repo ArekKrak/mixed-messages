@@ -1,5 +1,8 @@
 /* OBJECTIVES:
-- */
+- Build a message generator program using JavaScript.
+- Make up the output of at least three different pieces of data.
+- Use Git version conrol.
+- Use command line.*/
 
 const projTitle = `            ▖  ▖▄▖▖▖▄▖▄       ▖  ▖▄▖▄▖▄▖▄▖▄▖▄▖▄▖  
             ▛▖▞▌▐ ▚▘▙▖▌▌      ▛▖▞▌▙▖▚ ▚ ▌▌▌ ▙▖▚   
@@ -542,6 +545,7 @@ const randomPick = arr => arr[Math.floor(Math.random() * arr.length)];
 
 function randomMessage() {
   const lang = randomPick(top20);
+  /*  */
   const art = Array.isArray(lang.artLogo) ? lang.artLogo.join("") : String(lang.artLogo);
   
   if (!lang.name || lang.rank === null) {
