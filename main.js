@@ -543,15 +543,16 @@ const top20 = [
 
 const randomPick = arr => arr[Math.floor(Math.random() * arr.length)];
 
+/* The randomMesssage function  */
 function randomMessage() {
   const lang = randomPick(top20);
   /*  */
   const art = Array.isArray(lang.artLogo) ? lang.artLogo.join("") : String(lang.artLogo);
   
-  if (!lang.name || lang.rank === null) {
+  if (!lang.name || lang.rank == null) {
     return `\n${art}`;
   }
-  return `#${lang.rank} on TIOBE Index in Aug 2025: ${lang.name}.\n${lang.artLogo}`;
+  return `#${lang.rank} on TIOBE Index in Aug 2025: ${lang.name}.\n${art}`;
 }
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
