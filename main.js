@@ -545,20 +545,32 @@ const top20 = [
 
 const randomPick = arr => arr[Math.floor(Math.random() * arr.length)];
 
-/* The randomMesssage function picks one random item from the top20 array (lang). */
+// The randomMesssage function picks one random item from the top20 array (lang).
 function randomMessage() {
   const lang = randomPick(top20);
-  /*  */
+  /* Normalizes the ASCII art field (artLogo) so a user always gets a single printable string,
+     regardless of artLogo being an array of strings or already a string. */
   const art = Array.isArray(lang.artLogo) ? lang.artLogo.join("") : String(lang.artLogo);
-  
+  // Prints only the art, if required fields are missing (== null is used to catch both null and undefined.)
   if (!lang.name || lang.rank == null) {
     return `\n${art}`;
   }
+  // Otherwise, prints "rank + name" line, then the art logo.
   return `#${lang.rank} on TIOBE Index in Aug 2025: ${lang.name}.\n${art}`;
 }
 
+/* This function lets "pause" code fora set number of milliseconds. This is an arrow function that takes 'ms' (milliseconds)
+   as input.
+   
+   The new Promise() object wraps the delayed action in a Promise.
+   LESSON LEARNT: A Promise in JavaScript is a special object that represents the eventual completion (or failure) of an asynchronous
+   task. The Promise constructor immediately calls executor which is a function that receives two arguments: resolve and reject:
+    - resolve(value) -- marks the promise as fulfilled and hands back a result.
+    - reject(error) -- marks the Promise as failed with an error.*/
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
+/* An async function is one that always returns a Promise and allows the use of await inside it. This makes asynchronous code look
+   and behave more like synchronous code, improving readability. */
 async function main() {
   console.log(projTitle);
   await sleep(4000); // 6 seconds
