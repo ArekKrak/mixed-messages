@@ -21,9 +21,7 @@ const subtitle = `▄▖      ▄▖▄▖  ▄▖                ▘      ▖
                 ▄▖        ▗   ▄▖▄▖▄▖▄▖                   
                 ▌▌▌▌▛▌▌▌▛▘▜▘  ▄▌▛▌▄▌▙▖                   
                 ▛▌▙▌▙▌▙▌▄▌▐▖  ▙▖█▌▙▖▄▌                   
-                    ▄▌                                   
-                    
-Random programming language (TIOBE Index, Aug 2025):\n`;
+                    ▄▌                                   \n`;
 
 const top20 = [
   {
