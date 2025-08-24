@@ -576,7 +576,7 @@ function randomMessage() {
     return `\n${art}`;
   }
   // Otherwise, prints "rank + name" line, then the art logo.
-  return `#${lang.rank} on TIOBE Index in Aug 2025: ${lang.name}.\nPercentage of skilled engineers worldwide who recommend this language: ${lang.rating}\n${art}`;
+  return `#${lang.rank} on TIOBE Index in Aug 2025: ${lang.name}.\nPercentage of skilled engineers worldwide who recommend this language: ${lang.rating}%\n${art}`;
 }
 
 /* This function lets "pause" code fora set number of milliseconds. This is an arrow function that takes 'ms' (milliseconds)
