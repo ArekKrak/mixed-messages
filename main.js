@@ -4,6 +4,8 @@
 - Use Git version conrol.
 - Use command line.*/
 
+/********** TOPIC: ASCII Art - Top 20 Programming Languages according to TIOBE as of August 2025 **********/
+
 const projTitle = `            ▖  ▖▄▖▖▖▄▖▄       ▖  ▖▄▖▄▖▄▖▄▖▄▖▄▖▄▖  
             ▛▖▞▌▐ ▚▘▙▖▌▌      ▛▖▞▌▙▖▚ ▚ ▌▌▌ ▙▖▚   
             ▌▝ ▌▟▖▌▌▙▖▙▘      ▌▝ ▌▙▖▄▌▄▌▛▌▙▌▙▖▄▌  
@@ -543,7 +545,7 @@ const top20 = [
 
 const randomPick = arr => arr[Math.floor(Math.random() * arr.length)];
 
-/* The randomMesssage function  */
+/* The randomMesssage function picks one random item from the top20 array (lang). */
 function randomMessage() {
   const lang = randomPick(top20);
   /*  */
