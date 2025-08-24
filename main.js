@@ -1,10 +1,10 @@
 /* OBJECTIVES:
 - Build a message generator program using JavaScript.
-- Make up the output of at least three different pieces of data.
-- Use Git version conrol.
-- Use command line.*/
+- Generate output from at least three different pieces of data.
+- Use Git version control.
+- Use the command line.*/
 
-/********** TOPIC: ASCII Art - Top 20 Programming Languages according to TIOBE as of August 2025 **********/
+/********** TOPIC: ASCII Art – Top 20 Programming Languages by TIOBE, August 2025 **********/
 
 const projTitle = `            ▖  ▖▄▖▖▖▄▖▄       ▖  ▖▄▖▄▖▄▖▄▖▄▖▄▖▄▖  
             ▛▖▞▌▐ ▚▘▙▖▌▌      ▛▖▞▌▙▖▚ ▚ ▌▌▌ ▙▖▚   
@@ -565,13 +565,13 @@ const top20 = [
 
 const randomPick = arr => arr[Math.floor(Math.random() * arr.length)];
 
-// The randomMesssage function picks one random item from the top20 array (lang).
+// The randomMessage function picks a random item from the top20 array (lang).
 function randomMessage() {
   const lang = randomPick(top20);
-  /* Normalizes the ASCII art field (artLogo) so a user always gets a single printable string,
-     regardless of artLogo being an array of strings or already a string. */
+  /* Normalizes the ASCII art field (artLogo) so the user always receives a single printable string,
+     whether artLogo is an array of strings or already a string. */
   const art = Array.isArray(lang.artLogo) ? lang.artLogo.join("") : String(lang.artLogo);
-  // Prints only the art, if required fields are missing (== null is used to catch both null and undefined.)
+  // Prints only the art if required fields are missing (== null is used to catch both null and undefined.)
   if (!lang.name || lang.rank == null || lang.rating == null) {
     return `\n${art}`;
   }
@@ -579,18 +579,21 @@ function randomMessage() {
   return `#${lang.rank} on TIOBE Index in Aug 2025: ${lang.name}.\nPercentage of skilled engineers worldwide who recommend this language: ${lang.rating}%\n${art}`;
 }
 
-/* This function lets "pause" code fora set number of milliseconds. This is an arrow function that takes 'ms' (milliseconds)
-   as input.
-   
-   The new Promise() object wraps the delayed action in a Promise.
-   LESSON LEARNT: A Promise in JavaScript is a special object that represents the eventual completion (or failure) of an asynchronous
-   task. The Promise constructor immediately calls executor which is a function that receives two arguments: resolve and reject:
-    - resolve(value) -- marks the promise as fulfilled and hands back a result.
-    - reject(error) -- marks the Promise as failed with an error.*/
+/* This function "pauses" code execution for a given number of milliseconds.
+It’s an arrow function that takes `ms` (milliseconds) as input.
+
+The `new Promise()` object wraps the delay in a Promise.
+
+LESSON LEARNT:
+A Promise in JavaScript is a special object that represents the eventual
+completion (or failure) of an asynchronous task. The Promise constructor
+immediately calls the executor function, which receives two arguments:
+  - resolve(value) -- marks the Promise as fulfilled and returns a result.
+  - reject(error) -- marks the Promise as failed with an error.*/
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-/* An async function is one that always returns a Promise and allows the use of await inside it. This makes asynchronous code look
-   and behave more like synchronous code, improving readability. */
+/* An async function always returns a Promise and allows the use of `await` inside it.
+   This makes asynchronous code look and behave more like synchronous code, improving readability. */
 async function main() {
   console.log(projTitle);
   await sleep(4000); // 4 seconds
