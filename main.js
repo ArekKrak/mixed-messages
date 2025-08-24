@@ -593,7 +593,7 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
    and behave more like synchronous code, improving readability. */
 async function main() {
   console.log(projTitle);
-  await sleep(4000); // 6 seconds
+  await sleep(4000); // 4 seconds
   console.log(subtitle);
   await sleep(3000);
   console.log(randomMessage());
