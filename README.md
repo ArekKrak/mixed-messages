@@ -110,6 +110,7 @@ Percentage of skilled engineers worldwide who recommend this language: 3.15%
              ---------- 
 
 ```
+![Demo animation](mixed-messages.gif)
 
 ## Key Concepts Demonstrated
 
